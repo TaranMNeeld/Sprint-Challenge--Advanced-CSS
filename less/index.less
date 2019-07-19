@@ -1,4 +1,19 @@
 // Import your less files here:
+@import "variables";
+@import "mixins";
+@import "reset";
+@import "global";
+@import "navigation";
+@import "footer";
+@import "home-page";
+
+button {
+    .buttons(@buttonBackgroundColor, @radius, @buttonFontColor);
+    &:hover {
+        background: white;
+        color: black;
+    }
+}
 
 
 

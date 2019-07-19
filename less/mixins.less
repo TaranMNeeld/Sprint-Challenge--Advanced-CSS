@@ -1,1 +1,33 @@
 // Mixins Here
+.flexDisplay(@alignment, @direction) {
+    display: flex;
+    align-items: @alignment;
+    flex-direction: @direction;
+}
+
+.navAnimations () {
+    @-moz-keyframes spin {
+        from { -moz-transform: rotate(0deg); }
+        to { -moz-transform: rotate(360deg); }
+    }
+    @-webkit-keyframes spin {
+        from { -webkit-transform: rotate(0deg); }
+        to { -webkit-transform: rotate(360deg); }
+    }
+    @keyframes spin {
+        from {transform:rotate(0deg);}
+        to {transform:rotate(360deg);}
+    }
+}
+
+.buttons (@buttonBackground, @borderRadius, @buttonColor) {
+    background: @buttonBackground;
+    border-radius: @borderRadius;
+    color: @buttonColor;
+    font-size: 1.7rem;
+}
+
+//creat media query 500px using @phone variable
+
+//introduce css animations
+
