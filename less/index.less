@@ -8,10 +8,16 @@
 @import "home-page";
 
 button {
+    border: none;
     .buttons(@buttonBackgroundColor, @radius, @buttonFontColor);
     &:hover {
         background: white;
         color: black;
+    }
+    @media @phone {
+        width: 100%;
+        height: 50px;
+        font-size: 3rem;
     }
 }
 
