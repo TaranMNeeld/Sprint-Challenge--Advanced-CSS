@@ -5,20 +5,20 @@
     flex-direction: @direction;
 }
 
-.navAnimations () {
-    @-moz-keyframes spin {
-        from { -moz-transform: rotate(0deg); }
-        to { -moz-transform: rotate(360deg); }
+.navAnimations (@startMargin, @startWidth) {
+    animation-duration: 2s;
+    animation-name: slidein;
+    @keyframes slidein {
+        from {
+          margin-left: @startMargin;
+          width: @startWidth; 
+        }
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
     }
-    @-webkit-keyframes spin {
-        from { -webkit-transform: rotate(0deg); }
-        to { -webkit-transform: rotate(360deg); }
-    }
-    @keyframes spin {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(360deg);}
-    }
-}
 
 .buttons (@buttonBackground, @borderRadius, @buttonColor) {
     background: @buttonBackground;
