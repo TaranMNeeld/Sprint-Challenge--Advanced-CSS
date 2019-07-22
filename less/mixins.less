@@ -1,1 +1,28 @@
 // Mixins Here
+.flexDisplay(@alignment, @direction) {
+    display: flex;
+    align-items: @alignment;
+    flex-direction: @direction;
+}
+
+.navAnimations (@startMargin, @startWidth) {
+    animation-duration: 2s;
+    animation-name: slidein;
+    @keyframes slidein {
+        from {
+          margin-left: @startMargin;
+          width: @startWidth; 
+        }
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+    }
+
+.buttons (@buttonBackground, @borderRadius, @buttonColor) {
+    background: @buttonBackground;
+    border-radius: @borderRadius;
+    color: @buttonColor;
+    font-size: 1.7rem;
+}
